@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CallenderForTest2" 
+             x:Class="CalculatorForTest2.MainPage">
+    <StackLayout Padding="20,50,20,20">
+        <Button AutomationId="ButtonClear"  Text="Clear"  x:Name="ButtonClear" HorizontalOptions="EndAndExpand" Clicked="ClearClicked"/>
+        <Entry IsEnabled="false" x:Name="EntryResult"  AutomationId="EntryResult" Text="{Binding Result, Mode=OneWay}"/>
+        <Entry AutomationId="EntryInput" x:Name="EntryInput" Text="{Binding Input ,Mode=TwoWay}" Keyboard="Numeric" MaxLength="5"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button AutomationId="ButtonPlus" Text="+" x:Name="ButtonPlus" StyleClass="ButtonOperation" Clicked="PlusClicked"  />
+            <Button AutomationId="ButtonMinus" Text="-" x:Name="ButtonMinus" StyleClass="ButtonOperation" Clicked="MinusClicked"  />
+            <Button AutomationId="ButtonMultiply" Text="x" x:Name="Buttonmultiply" StyleClass="ButtonOperation" Clicked="MultiplyClicked"  />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button AutomationId="ButtonDivide" Text="/" x:Name="ButtonDivide" StyleClass="ButtonOperation" Clicked="DivideClicked"  />
+            <Button AutomationId="ButtonModulo" Text="%" x:Name="ButtonModulo" StyleClass="ButtonOperation" Clicked="ModuloClicked"  />
+            <Button AutomationId="ButtonSqrt" Text="&#x221A;" x:Name="ButtonSqrt" StyleClass="ButtonOperation" Clicked="SqrtClicked"  />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button AutomationId="ButtonEqual" Text="=" x:Name="ButtonEqual" StyleClass="ButtonOperation" Clicked="EqualClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
